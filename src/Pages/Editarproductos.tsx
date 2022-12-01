@@ -17,7 +17,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 function Editarproductos() {
   const location = useLocation();
   let producto = location.state.producto;
-  console.log(producto);
 
   const [nombre, setNombre] = useState(producto.nombre);
   const [descripcion, setDescripcion] = useState(producto.descripcion);
