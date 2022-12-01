@@ -18,6 +18,15 @@ function Menuprincipal() {
       state: { userId: id, tienda: tienda },
     });
   };
+  const iraVentas = () => {
+    navigate("/ventas");
+  };
+  const iraClientes = () => {
+    navigate("/clientes", { state: { userId: id } });
+  };
+  const iraReportes = () => {
+    navigate("/reportes");
+  };
 
   return (
     <Flex
@@ -63,20 +72,13 @@ function Menuprincipal() {
           >
             <Text fontSize="lg">Productos</Text>
           </Box>
-          <Box
-            bg="teal.300"
-            height="80px"
-            p={4}
-            onClick={() => {
-              console.log("wws");
-            }}
-          >
+          <Box bg="teal.300" height="80px" p={4} onClick={iraClientes}>
             <Text fontSize="lg">Clientes</Text>
           </Box>
-          <Box bg="teal.300" height="80px" p={4}>
+          <Box bg="teal.300" height="80px" p={4} onClick={iraVentas}>
             <Text fontSize="lg">Vender</Text>
           </Box>
-          <Box bg="teal.300" height="80px" p={4}>
+          <Box bg="teal.300" height="80px" p={4} onClick={iraReportes}>
             <Text fontSize="lg">Reporte</Text>
           </Box>
         </SimpleGrid>
